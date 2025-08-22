@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://reddit-tool-1.onrender.com">
   <link rel="dns-prefetch" href="https://reddit-tool-1.onrender.com">
 
-  <!-- Basic social cards -->
+  <!-- Social cards -->
   <meta property="og:title" content="Reddit Skills Radar — Kevin Cooney" />
   <meta property="og:description" content="Real-time signals from Reddit: what skills, tools, and topics are rising right now." />
   <meta property="og:type" content="website" />
@@ -25,9 +25,12 @@
       <nav>
         <a href="#tool">Tool</a>
         <a href="#what">What you’ll see</a>
-        <a href="#stack">Stack</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
         <a href="#about">About</a>
         <a class="btn" href="https://reddit-tool-1.onrender.com/" target="_blank" rel="noopener">Launch the Tool</a>
+        <a class="btn" href="https://github.com/teedybeedy/reddit-tool" target="_blank" rel="noopener">GitHub Repo</a>
       </nav>
     </div>
   </header>
@@ -70,7 +73,10 @@
           Pulls public Reddit posts via OAuth, filters by time and keywords, dedupes, and extracts skills with a curated lexicon.
           Signals are decay-weighted and summarized with charts & tables. Paste a JD to see gaps vs. what’s trending.
         </p>
-        <a class="btn btn-primary" href="https://reddit-tool-1.onrender.com/" target="_blank" rel="noopener">Open Reddit Skills Radar</a>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://reddit-tool-1.onrender.com/" target="_blank" rel="noopener">Open Reddit Skills Radar</a>
+          <a class="btn" href="https://github.com/teedybeedy/reddit-tool" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
       </div>
     </section>
 
@@ -89,32 +95,89 @@
         <div>
           <h3>Why Reddit?</h3>
           <p>Practitioners speak frankly about tools and pain points—less polished than blogs, more current than surveys.</p>
-          <p class="tiny">This page links out to the live app hosted on Render.</p>
+          <p class="tiny">This page links to the live app hosted on Render.</p>
         </div>
       </div>
     </section>
 
-    <!-- Stack -->
-    <section id="stack" class="section">
+    <!-- Experience (from resume) -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2>Experience</h2>
+        <div class="card">
+          <div class="card-head">Chewy — Director of AI & Data Science (Mar 2023 – Present) • San Francisco, CA</div>
+          <div class="card-body">
+            <p>Leading Chewy’s HR data transformation and LLM adoption for employee experience and operational efficiency; managing a 22-person team across HR data engineering, BI, and data science; integrating Llama-based automations and predictive analytics into HR functions.</p>
+          </div>
+        </div>
+        <div class="card" style="margin-top:16px">
+          <div class="card-head">Amazon — Sr. Manager, Data Science (Mar 2017 – Mar 2023) • San Francisco, CA</div>
+          <div class="card-body">
+            <p>Led 35+ HR data scientists delivering PoC and production models, experimentation, survey/psychometrics, and causal impact analyses; contributions influenced products, programs, and policies (e.g., attrition models, pay defect detection, staffing recommendations, promotion modeling).</p>
+          </div>
+        </div>
+        <div class="card" style="margin-top:16px">
+          <div class="card-head">TripAdvisor — Director of Data Science (Feb 2015 – Mar 2017)</div>
+          <div class="card-body">
+            <p>Head of DS & Analytics for TripAdvisor Attractions; managed 15+ analysts/scientists driving predictive modeling, web analytics, and BI for product, marketing, sales, finance, operations, and executives.</p>
+          </div>
+        </div>
+        <div class="card" style="margin-top:16px">
+          <div class="card-head">Fandom (Wikimedia) — Head of Data (Dec 2013 – Feb 2015)</div>
+          <div class="card-body">
+            <p>First data leader; set data strategy, built analytics & ML models for engagement, experimentation, and content optimization; oversaw pipelines end to end.</p>
+          </div>
+        </div>
+        <div class="card" style="margin-top:16px">
+          <div class="card-head">StubHub — Marketing Analytics Manager (May 2012 – Dec 2013)</div>
+          <div class="card-body">
+            <p>Led a team applying ML for marketing optimization, segmentation, and predictive targeting; drove uplift in targeting and mobile engagement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills (from resume) -->
+    <section id="skills" class="section alt">
       <div class="container grid-2">
         <div>
-          <h3>Stack</h3>
+          <h3>Skills & Tools</h3>
           <ul class="bullets">
-            <li>Python • Streamlit • Docker (Render)</li>
-            <li>Reddit OAuth API (read-only)</li>
-            <li>pandas / NumPy / Matplotlib</li>
-            <li>Skill lexicon via <code>skills_lexicon.yaml</code></li>
+            <li><strong>AI/ML:</strong> LLMs, Llama, causal inference, clustering, classification, deployment & optimization</li>
+            <li><strong>Languages:</strong> Python, R, SQL, Stata</li>
+            <li><strong>Data/Analytics:</strong> pandas, NumPy, A/B testing, Adobe Analytics, GA</li>
+            <li><strong>Cloud:</strong> AWS (S3, Redshift, Athena, Quicksight, SageMaker), GCP (BigQuery, Cloud SQL, Looker), Snowflake (Cortex AI)</li>
+            <li><strong>Platforms:</strong> Docker, Tableau, Qualtrics/Qualaroo, Microsoft 365</li>
           </ul>
         </div>
         <div class="card">
-          <div class="card-head">Roadmap</div>
+          <div class="card-head">Highlights</div>
           <div class="card-body">
             <ul class="bullets">
-              <li>Weighted aliases & per-skill exclusions</li>
-              <li>BERTopic clusters for themes</li>
-              <li>Saved searches & scheduled digests</li>
-              <li>Org auth & user presets</li>
+              <li>Built & led large DS/ML/econ teams delivering measurable business impact</li>
+              <li>Integrated LLMs and ML into HR decision flows at scale</li>
+              <li>End-to-end ownership: data strategy → modeling → productionization</li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <div class="container grid-2">
+        <div>
+          <h3>Education</h3>
+          <ul class="bullets">
+            <li><strong>Indiana University – Bloomington:</strong> PhD Marketing (2014), MBA (2011)</li>
+            <li><strong>University of Utah:</strong> MS Finance (2007)</li>
+            <li><strong>University of Texas – Austin:</strong> BS Statistics (2005)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-head">Location & Work Eligibility</div>
+          <div class="card-body">
+            <p>San Francisco Bay Area • Right to work in the EU</p>
           </div>
         </div>
       </div>
@@ -125,15 +188,16 @@
       <div class="container grid-2">
         <div>
           <h3>About Kevin</h3>
-          <p>Research & Data Science leader (HR analytics, ML, econometrics). I build decision tools that translate models into
-             business clarity. Exploring live skills intelligence from public data.</p>
+          <p>AI & Data Science leader with 15+ years building, scaling, and aligning DS/ML functions to exec priorities across HR, marketing, finance, and operations research. Passionate about translating advanced modeling—LLMs, ML, and econometrics—into clear, high-leverage decisions.</p>
         </div>
         <div class="card">
-          <div class="card-head">Contact</div>
+          <div class="card-head">Contact & Links</div>
           <div class="card-body">
-            <p><a href="mailto:kevin.cooney@example.com">kevin.cooney@example.com</a></p>
-            <p><a href="https://www.linkedin.com/in/kevincooney" target="_blank" rel="noopener">LinkedIn</a></p>
-            <p><a class="btn" href="https://reddit-tool-1.onrender.com/" target="_blank" rel="noopener">Launch the Tool</a></p>
+            <p><strong>Email:</strong> <a href="mailto:Kevin.J.Cooney@gmail.com">Kevin.J.Cooney@gmail.com</a></p>
+            <p><strong>Mobile:</strong> <a href="tel:+14157999090">(415) 799-9090</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kevinjcooney" target="_blank" rel="noopener">linkedin.com/in/kevinjcooney</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/teedybeedy" target="_blank" rel="noopener">github.com/teedybeedy</a> • <a href="https://github.com/teedybeedy/reddit-tool" target="_blank" rel="noopener">reddit-tool</a></p>
+            <p><a class="btn btn-primary" href="https://reddit-tool-1.onrender.com/" target="_blank" rel="noopener">Launch the Tool</a></p>
           </div>
         </div>
       </div>
@@ -143,7 +207,10 @@
   <footer class="site-footer">
     <div class="container">
       <span>© <span id="y"></span> Kevin Cooney</span>
-      <a href="https://github.com/teedybeedy/reddit-tool" target="_blank" rel="noopener">GitHub</a>
+      <span>
+        <a href="https://github.com/teedybeedy" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://github.com/teedybeedy/reddit-tool" target="_blank" rel="noopener">Repo</a>
+      </span>
     </div>
   </footer>
 
