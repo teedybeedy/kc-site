@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kevin Cooney — Reddit Skills Radar</title>
+  <meta name="description" content="Live Reddit insights for HR & Data leaders — skills trends, sentiment, and competitive signals." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">Kevin Cooney</div>
+      <nav>
+        <a href="#tool">Tool</a>
+        <a href="#what">What you’ll see</a>
+        <a href="#stack">Stack</a>
+        <a href="#about">About</a>
+        <a class="btn" href="https://reddit-tool-1.onrender.com/" target="_blank" rel="noopener">Launch the Tool</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Reddit Skills Radar</h1>
+          <p class="lead">
+            Real-time signals from Reddit: what skills, tools, and topics are rising right now.
+            Built for HR & data leaders who want <em>proof</em> over promises.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://reddit-tool-1.onrender.com/" target="_blank" rel="noopener">Launch the Tool</a>
+            <a class="btn" href="#what">See what it shows</a>
+          </div>
+          <p class="tiny">Note: Optimized for desktop. Uses Reddit OAuth; no private data stored.</p>
+        </div>
+        <div class="hero-card">
+          <div class="card-head">Live Snapshot</div>
+          <div class="card-body">
+            <ul class="bullets">
+              <li>Search Reddit by term or subreddit</li>
+              <li>Trend-weighted skills & tools</li>
+              <li>Co-occurrence (ecosystems)</li>
+              <li>JD gap checker</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tool Section -->
+    <section id="tool" class="section">
+      <div class="container">
+        <h2>The Tool</h2>
+        <p>
+          It pulls public Reddit posts via OAuth, filters by time window and keywords, dedupes, and extracts skills with a curated lexicon.
+          Signals are decay-weighted (half-life) and summarized with charts & tables. You can paste a JD to see gaps vs. what’s trending.
+        </p>
+        <a class="btn btn-primary" href="https://reddit-tool-1.onrender.com/" target="_blank" rel="noopener">Open Reddit Skills Radar</a>
+      </div>
+    </section>
+
+    <!-- What You'll See -->
+    <section id="what" class="section alt">
+      <div class="container grid-2">
+        <div>
+          <h3>What you’ll see</h3>
+          <ol class="numbered">
+            <li><strong>Top skills & tools</strong> by decay-weighted trend score.</li>
+            <li><strong>Co-occurrence pairs</strong> that reveal ecosystems (e.g., DuckDB ↔ Polars).</li>
+            <li><strong>JD Gap</strong>: skills in your job spec vs. what’s spiking publicly.</li>
+            <li><strong>Quality controls</strong>: rate-limit HUD, dedupe, strict vs fallback modes.</li>
+          </ol>
+        </div>
+        <div>
+          <h3>Why Reddit?</h3>
+          <p>It’s where practitioners speak frankly about tools and pain points—less polished than blogs, more current than surveys.</p>
+          <p class="tiny">Inspired by the structure used on bettycherif.com (custom app + narrative context + CTA). </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stack -->
+    <section id="stack" class="section">
+      <div class="container grid-2">
+        <div>
+          <h3>Stack</h3>
+          <ul class="bullets">
+            <li>Python • Streamlit • Docker (Render)</li>
+            <li>Reddit OAuth API (read-only)</li>
+            <li>pandas / NumPy / Matplotlib</li>
+            <li>Skill lexicon via <code>skills_lexicon.yaml</code></li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-head">Roadmap</div>
+          <div class="card-body">
+            <ul class="bullets">
+              <li>Weighted aliases & exclusions per skill</li>
+              <li>BERTopic clusters for themes</li>
+              <li>Saved searches & scheduled digests</li>
+              <li>Org auth & user presets</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section alt">
+      <div class="container grid-2">
+        <div>
+          <h3>About Kevin</h3>
+          <p>Research & Data Science leader (HR analytics, ML, econometrics). I build decision tools that translate models into
+             business clarity. Currently exploring live skills intelligence from public data.</p>
+        </div>
+        <div class="card">
+          <div class="card-head">Contact</div>
+          <div class="card-body">
+            <p><a href="mailto:kevin.cooney@example.com">kevin.cooney@example.com</a></p>
+            <p><a href="https://www.linkedin.com/in/kevincooney" target="_blank" rel="noopener">LinkedIn</a></p>
+            <p><a class="btn" href="https://reddit-tool-1.onrender.com/" target="_blank" rel="noopener">Launch the Tool</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© <span id="y"></span> Kevin Cooney</span>
+      <a href="https://github.com/teedybeedy/reddit-tool" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
