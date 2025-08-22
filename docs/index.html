@@ -8,6 +8,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Prep the connection to your app -->
+  <link rel="preconnect" href="https://reddit-tool-1.onrender.com">
+  <link rel="dns-prefetch" href="https://reddit-tool-1.onrender.com">
+
+  <!-- Basic social cards -->
+  <meta property="og:title" content="Reddit Skills Radar — Kevin Cooney" />
+  <meta property="og:description" content="Real-time signals from Reddit: what skills, tools, and topics are rising right now." />
+  <meta property="og:type" content="website" />
 </head>
 <body>
   <header class="site-header">
@@ -53,34 +62,34 @@
       </div>
     </section>
 
-    <!-- Tool Section -->
+    <!-- Tool -->
     <section id="tool" class="section">
       <div class="container">
         <h2>The Tool</h2>
         <p>
-          It pulls public Reddit posts via OAuth, filters by time window and keywords, dedupes, and extracts skills with a curated lexicon.
-          Signals are decay-weighted (half-life) and summarized with charts & tables. You can paste a JD to see gaps vs. what’s trending.
+          Pulls public Reddit posts via OAuth, filters by time and keywords, dedupes, and extracts skills with a curated lexicon.
+          Signals are decay-weighted and summarized with charts & tables. Paste a JD to see gaps vs. what’s trending.
         </p>
         <a class="btn btn-primary" href="https://reddit-tool-1.onrender.com/" target="_blank" rel="noopener">Open Reddit Skills Radar</a>
       </div>
     </section>
 
-    <!-- What You'll See -->
+    <!-- What You’ll See -->
     <section id="what" class="section alt">
       <div class="container grid-2">
         <div>
           <h3>What you’ll see</h3>
           <ol class="numbered">
             <li><strong>Top skills & tools</strong> by decay-weighted trend score.</li>
-            <li><strong>Co-occurrence pairs</strong> that reveal ecosystems (e.g., DuckDB ↔ Polars).</li>
-            <li><strong>JD Gap</strong>: skills in your job spec vs. what’s spiking publicly.</li>
+            <li><strong>Co-occurrence pairs</strong> revealing ecosystems.</li>
+            <li><strong>JD Gap</strong>: skills in your job spec vs. public spikes.</li>
             <li><strong>Quality controls</strong>: rate-limit HUD, dedupe, strict vs fallback modes.</li>
           </ol>
         </div>
         <div>
           <h3>Why Reddit?</h3>
-          <p>It’s where practitioners speak frankly about tools and pain points—less polished than blogs, more current than surveys.</p>
-          <p class="tiny">Inspired by the structure used on bettycherif.com (custom app + narrative context + CTA). </p>
+          <p>Practitioners speak frankly about tools and pain points—less polished than blogs, more current than surveys.</p>
+          <p class="tiny">This page links out to the live app hosted on Render.</p>
         </div>
       </div>
     </section>
@@ -101,7 +110,7 @@
           <div class="card-head">Roadmap</div>
           <div class="card-body">
             <ul class="bullets">
-              <li>Weighted aliases & exclusions per skill</li>
+              <li>Weighted aliases & per-skill exclusions</li>
               <li>BERTopic clusters for themes</li>
               <li>Saved searches & scheduled digests</li>
               <li>Org auth & user presets</li>
@@ -117,7 +126,7 @@
         <div>
           <h3>About Kevin</h3>
           <p>Research & Data Science leader (HR analytics, ML, econometrics). I build decision tools that translate models into
-             business clarity. Currently exploring live skills intelligence from public data.</p>
+             business clarity. Exploring live skills intelligence from public data.</p>
         </div>
         <div class="card">
           <div class="card-head">Contact</div>
@@ -137,6 +146,11 @@
       <a href="https://github.com/teedybeedy/reddit-tool" target="_blank" rel="noopener">GitHub</a>
     </div>
   </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+  <!-- Pre-warm Render (free plan cold start) -->
+  <script>
+    fetch("https://reddit-tool-1.onrender.com/", { mode: "no-cors" }).catch(() => {});
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
