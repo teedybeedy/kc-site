@@ -4,17 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kevin Cooney — Reddit Skills Radar</title>
-  <meta name="description" content="Live Reddit insights for HR & Data leaders — skills trends, sentiment, and competitive signals." />
+  <meta name="description" content="Live Reddit signals for HR & Data leaders—skills trends, tool ecosystems, and JD gap analysis." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://reddit-tool-1.onrender.com">
-  <link rel="dns-prefetch" href="https://reddit-tool-1.onrender.com">
+  <link rel="preconnect" href="https://reddit-tool-3.onrender.com">
+  <link rel="dns-prefetch" href="https://reddit-tool-3.onrender.com">
+
   <meta property="og:title" content="Reddit Skills Radar — Kevin Cooney" />
-  <meta property="og:description" content="Real-time signals from Reddit: what skills, tools, and topics are rising right now." />
+  <meta property="og:description" content="Real-time skills & tools from Reddit. Reduce noise. Make better talent decisions." />
   <meta property="og:type" content="website" />
 </head>
+
 <body>
+  <!-- NAV -->
   <header class="site-header">
     <div class="container nav">
       <a href="#" class="brand">Kevin Cooney</a>
@@ -31,24 +34,25 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container hero-betty">
+    <div class="container hero-grid">
       <div class="hero-copy">
         <h1>Reddit Skills Radar</h1>
         <p class="lead">Real-time signals from Reddit revealing which <strong>skills</strong>, <strong>tools</strong>, and
-          <strong>topics</strong> are rising—built for HR & data leaders who want proof over promises.</p>
+          <strong>topics</strong> are rising now—built for People Analytics and TA leaders who want proof over promises.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://reddit-tool-3.onrender.com/" target="_blank" rel="noopener">Launch the App</a>
+          <a class="btn btn-primary" href="https://reddit-tool-3.onrender.com/" target="_blank" rel="noopener">Open the App</a>
           <a class="btn" href="#shots">See Screenshots</a>
         </div>
-        <p class="tiny">Hosted on Render • No private data stored • OAuth for Reddit API</p>
+        <p class="tiny">Hosted on Render • Uses Reddit API • No private data stored</p>
       </div>
-      <div class="hero-photo-card">
-        <img src="assets/kevin.jpg" alt="Kevin Cooney at Lake Tahoe" class="hero-photo" />
-        <div class="hero-card">
+
+      <div class="hero-side">
+        <img src="assets/kevin.jpg" alt="Kevin Cooney" class="hero-photo" />
+        <div class="card">
           <div class="card-head">About Kevin</div>
           <div class="card-body">
-            <p>AI & People Analytics leader (15+ yrs) turning LLMs, ML, and econometrics into executive decisions.
-               Tahoe skier/snowboarder/hiker; I build tools I wish HR had.</p>
+            <p>AI & People Analytics leader (15+ yrs). I turn LLMs, ML, and econometrics into decisions leaders trust.
+              Avid Tahoe skier/snowboarder/hiker—I build tools I wish HR had.</p>
             <div class="mini-links">
               <a href="mailto:Kevin.J.Cooney@gmail.com">Email</a> ·
               <a href="https://www.linkedin.com/in/kevinjcooney" target="_blank" rel="noopener">LinkedIn</a> ·
@@ -66,29 +70,30 @@
       <div>
         <h2>The Tool</h2>
         <p>
-          The app ingests public Reddit posts, applies time-decay weighting, dedupes near-duplicates, and extracts skills using a curated lexicon.
-          It surfaces <em>Top Skills & Tools</em>, <em>Co-occurrences</em> (ecosystems), and a <em>JD Gap</em> view (paste a job spec—see what the market is actually talking about).
+          The app ingests public Reddit posts, applies time-decay weighting, de-dupes near-duplicates, and extracts skills via a curated lexicon.
+          It surfaces <em>Top Skills & Tools</em>, <em>Co-occurrences</em> (ecosystems), and a <em>JD Gap</em> view (paste a JD—compare against market chatter).
         </p>
         <ul class="bullets">
-          <li>Ranked by <strong>trend score</strong> = votes/comments × time decay</li>
-          <li><strong>De-duplication</strong> + quality filters to reduce noise</li>
-          <li><strong>Map-Reduce summaries</strong> for fast, accurate rollups</li>
-          <li>Paste a <strong>job description</strong> to compare against market chatter</li>
+          <li><strong>Trend score</strong> = votes/comments × time decay</li>
+          <li><strong>De-duplication</strong> + quality filters limit noise</li>
+          <li><strong>Map-Reduce summaries</strong> for fast rollups</li>
+          <li><strong>JD gap checker</strong> to align hiring signals to the market</li>
         </ul>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://reddit-tool-3.onrender.com/" target="_blank" rel="noopener">Open App</a>
+          <a class="btn btn-primary" href="https://reddit-tool-3.onrender.com/" target="_blank" rel="noopener">Try it Live</a>
           <a class="btn" href="https://github.com/teedybeedy/reddit-tool" target="_blank" rel="noopener">View Code</a>
         </div>
       </div>
+
       <div class="card">
-        <div class="card-head">Live Snapshot</div>
+        <div class="card-head">Quick Start</div>
         <div class="card-body">
-          <ul class="bullets">
-            <li>Search by term or subreddit</li>
-            <li>Top skills/tools & ecosystems</li>
-            <li>JD gap checker</li>
-            <li>Downloadable tables</li>
-          </ul>
+          <ol class="ol">
+            <li>Pick a subreddit or search term</li>
+            <li>Explore Top Skills & Tools</li>
+            <li>Open Co-occurrence graph for ecosystems</li>
+            <li>Paste a JD to see the gap analysis</li>
+          </ol>
         </div>
       </div>
     </div>
@@ -100,20 +105,20 @@
       <h2>Product Screenshots</h2>
       <div class="shot-grid">
         <figure class="shot">
-          <img src="assets/screenshots/shot1.png" alt="Screenshot: Top skills view">
+          <img src="assets/screenshots/shot1.png" alt="Top skills view">
           <figcaption>Top skills & tools ranked by trend score</figcaption>
         </figure>
         <figure class="shot">
-          <img src="assets/screenshots/shot2.png" alt="Screenshot: Co-occurrence view">
-          <figcaption>Co-occurrences revealing ecosystems</figcaption>
+          <img src="assets/screenshots/shot2.png" alt="Co-occurrence view">
+          <figcaption>Co-occurrences revealing tool ecosystems</figcaption>
         </figure>
         <figure class="shot">
-          <img src="assets/screenshots/shot3.png" alt="Screenshot: JD Gap">
-          <figcaption>Job-Description Gap analysis (paste a JD)</figcaption>
+          <img src="assets/screenshots/shot3.png" alt="JD gap view">
+          <figcaption>Paste a JD to get gap analysis vs the market</figcaption>
         </figure>
       </div>
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://reddit-tool-3.onrender.com/" target="_blank" rel="noopener">Try it live</a>
+        <a class="btn btn-primary" href="https://reddit-tool-3.onrender.com/" target="_blank" rel="noopener">Launch App</a>
       </div>
     </div>
   </section>
@@ -123,8 +128,8 @@
     <div class="container grid-2">
       <div>
         <h2>Why I built it</h2>
-        <p>Recruiting and workforce planning need <em>current</em> signals. Surveys and vendor reports lag; Reddit reveals what practitioners
-          struggle with <em>now</em>. This tool reduces noise and turns that stream into concise, defensible insights.</p>
+        <p>People decisions need <em>current</em> signals. Surveys and vendor reports lag; Reddit surfaces what practitioners
+          struggle with <em>now</em>. This app reduces noise and turns that firehose into concise, defensible insight.</p>
         <h3>Who it’s for</h3>
         <ul class="bullets">
           <li>People Analytics & TA leaders prioritizing skills</li>
@@ -132,13 +137,14 @@
           <li>Product/Strategy teams tracking tool ecosystems</li>
         </ul>
       </div>
+
       <div class="card">
-        <div class="card-head">Tech stack</div>
+        <div class="card-head">Tech Stack</div>
         <div class="card-body">
           <ul class="bullets">
             <li>Python · Streamlit · PRAW</li>
             <li>Render (hosting)</li>
-            <li>LLM map-reduce summaries (optional)</li>
+            <li>Optional LLM map-reduce summaries</li>
           </ul>
         </div>
       </div>
@@ -149,18 +155,19 @@
   <section id="resume" class="section alt">
     <div class="container">
       <h2>Resume</h2>
-      <p class="tiny">PDF recommended for viewing; DOCX provided if needed.</p>
+      <p class="tiny">PDF recommended for viewing; DOCX also available.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="resume/Kevin-Cooney-Resume.pdf" target="_blank" rel="noopener">Download PDF</a>
-        <a class="btn" href="resume/Kevin-Cooney-Resume.docx" target="_blank" rel="noopener">Download DOCX</a>
+        <a class="btn btn-primary" href="assets/resume/Kevin-Cooney-Resume.pdf" target="_blank" rel="noopener">Download PDF</a>
+        <a class="btn" href="assets/resume/Kevin-Cooney-Resume.docx" target="_blank" rel="noopener">Download DOCX</a>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container">
+    <div class="container foot">
       <span>© <span id="y"></span> Kevin Cooney</span>
-      <span>
+      <span class="foot-links">
         <a href="https://github.com/teedybeedy" target="_blank" rel="noopener">GitHub</a> ·
         <a href="https://github.com/teedybeedy/reddit-tool" target="_blank" rel="noopener">Repo</a> ·
         <a href="https://reddit-tool-3.onrender.com/" target="_blank" rel="noopener">Live App</a>
@@ -169,7 +176,7 @@
   </footer>
 
   <script>
-    // Pre-warm Render dyno on first visit (free plan)
+    // Pre-warm Render dyno (free plan)
     fetch("https://reddit-tool-3.onrender.com/", { mode: "no-cors" }).catch(() => {});
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
