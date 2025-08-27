@@ -8,12 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- Prep the connection to your app -->
   <link rel="preconnect" href="https://reddit-tool-1.onrender.com">
   <link rel="dns-prefetch" href="https://reddit-tool-1.onrender.com">
-
-  <!-- Social cards -->
   <meta property="og:title" content="Reddit Skills Radar — Kevin Cooney" />
   <meta property="og:description" content="Real-time signals from Reddit: what skills, tools, and topics are rising right now." />
   <meta property="og:type" content="website" />
@@ -21,201 +17,159 @@
 <body>
   <header class="site-header">
     <div class="container nav">
-      <div class="brand">Kevin Cooney</div>
+      <a href="#" class="brand">Kevin Cooney</a>
       <nav>
         <a href="#tool">Tool</a>
-        <a href="#what">What you’ll see</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
+        <a href="#shots">Screenshots</a>
         <a href="#about">About</a>
-        <a class="btn" href="https://reddit-tool-1.onrender.com/" target="_blank" rel="noopener">Launch the Tool</a>
-        <a class="btn" href="https://github.com/teedybeedy/reddit-tool" target="_blank" rel="noopener">GitHub Repo</a>
+        <a href="#resume">Resume</a>
+        <a class="btn" href="https://github.com/teedybeedy/reddit-tool" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-primary" href="https://reddit-tool-1.onrender.com/" target="_blank" rel="noopener">Launch App</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <h1>Reddit Skills Radar</h1>
-          <p class="lead">
-            Real-time signals from Reddit: what skills, tools, and topics are rising right now.
-            Built for HR & data leaders who want <em>proof</em> over promises.
-          </p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="https://reddit-tool-1.onrender.com/" target="_blank" rel="noopener">Launch the Tool</a>
-            <a class="btn" href="#what">See what it shows</a>
-          </div>
-          <p class="tiny">Note: Optimized for desktop. Uses Reddit OAuth; no private data stored.</p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-betty">
+      <div class="hero-copy">
+        <h1>Reddit Skills Radar</h1>
+        <p class="lead">Real-time signals from Reddit revealing which <strong>skills</strong>, <strong>tools</strong>, and
+          <strong>topics</strong> are rising—built for HR & data leaders who want proof over promises.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://reddit-tool-1.onrender.com/" target="_blank" rel="noopener">Launch the App</a>
+          <a class="btn" href="#shots">See Screenshots</a>
         </div>
+        <p class="tiny">Hosted on Render • No private data stored • OAuth for Reddit API</p>
+      </div>
+      <div class="hero-photo-card">
+        <img src="assets/kevin.jpg" alt="Kevin Cooney at Lake Tahoe" class="hero-photo" />
         <div class="hero-card">
-          <div class="card-head">Live Snapshot</div>
+          <div class="card-head">About Kevin</div>
           <div class="card-body">
-            <ul class="bullets">
-              <li>Search Reddit by term or subreddit</li>
-              <li>Trend-weighted skills & tools</li>
-              <li>Co-occurrence (ecosystems)</li>
-              <li>JD gap checker</li>
-            </ul>
+            <p>AI & People Analytics leader (15+ yrs) turning LLMs, ML, and econometrics into executive decisions.
+               Tahoe skier/snowboarder/hiker; I build tools I wish HR had.</p>
+            <div class="mini-links">
+              <a href="mailto:Kevin.J.Cooney@gmail.com">Email</a> ·
+              <a href="https://www.linkedin.com/in/kevinjcooney" target="_blank" rel="noopener">LinkedIn</a> ·
+              <a href="https://github.com/teedybeedy" target="_blank" rel="noopener">GitHub</a>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Tool -->
-    <section id="tool" class="section">
-      <div class="container">
+  <!-- TOOL -->
+  <section id="tool" class="section">
+    <div class="container grid-2">
+      <div>
         <h2>The Tool</h2>
         <p>
-          Pulls public Reddit posts via OAuth, filters by time and keywords, dedupes, and extracts skills with a curated lexicon.
-          Signals are decay-weighted and summarized with charts & tables. Paste a JD to see gaps vs. what’s trending.
+          The app ingests public Reddit posts, applies time-decay weighting, dedupes near-duplicates, and extracts skills using a curated lexicon.
+          It surfaces <em>Top Skills & Tools</em>, <em>Co-occurrences</em> (ecosystems), and a <em>JD Gap</em> view (paste a job spec—see what the market is actually talking about).
         </p>
+        <ul class="bullets">
+          <li>Ranked by <strong>trend score</strong> = votes/comments × time decay</li>
+          <li><strong>De-duplication</strong> + quality filters to reduce noise</li>
+          <li><strong>Map-Reduce summaries</strong> for fast, accurate rollups</li>
+          <li>Paste a <strong>job description</strong> to compare against market chatter</li>
+        </ul>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://reddit-tool-1.onrender.com/" target="_blank" rel="noopener">Open Reddit Skills Radar</a>
-          <a class="btn" href="https://github.com/teedybeedy/reddit-tool" target="_blank" rel="noopener">View on GitHub</a>
+          <a class="btn btn-primary" href="https://reddit-tool-1.onrender.com/" target="_blank" rel="noopener">Open App</a>
+          <a class="btn" href="https://github.com/teedybeedy/reddit-tool" target="_blank" rel="noopener">View Code</a>
         </div>
       </div>
-    </section>
-
-    <!-- What You’ll See -->
-    <section id="what" class="section alt">
-      <div class="container grid-2">
-        <div>
-          <h3>What you’ll see</h3>
-          <ol class="numbered">
-            <li><strong>Top skills & tools</strong> by decay-weighted trend score.</li>
-            <li><strong>Co-occurrence pairs</strong> revealing ecosystems.</li>
-            <li><strong>JD Gap</strong>: skills in your job spec vs. public spikes.</li>
-            <li><strong>Quality controls</strong>: rate-limit HUD, dedupe, strict vs fallback modes.</li>
-          </ol>
-        </div>
-        <div>
-          <h3>Why Reddit?</h3>
-          <p>Practitioners speak frankly about tools and pain points—less polished than blogs, more current than surveys.</p>
-          <p class="tiny">This page links to the live app hosted on Render.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience (from resume) -->
-    <section id="experience" class="section">
-      <div class="container">
-        <h2>Experience</h2>
-        <div class="card">
-          <div class="card-head">Chewy — Director of AI & Data Science (Mar 2023 – Present) • San Francisco, CA</div>
-          <div class="card-body">
-            <p>Leading Chewy’s HR data transformation and LLM adoption for employee experience and operational efficiency; managing a 22-person team across HR data engineering, BI, and data science; integrating Llama-based automations and predictive analytics into HR functions.</p>
-          </div>
-        </div>
-        <div class="card" style="margin-top:16px">
-          <div class="card-head">Amazon — Sr. Manager, Data Science (Mar 2017 – Mar 2023) • San Francisco, CA</div>
-          <div class="card-body">
-            <p>Led 35+ HR data scientists delivering PoC and production models, experimentation, survey/psychometrics, and causal impact analyses; contributions influenced products, programs, and policies (e.g., attrition models, pay defect detection, staffing recommendations, promotion modeling).</p>
-          </div>
-        </div>
-        <div class="card" style="margin-top:16px">
-          <div class="card-head">TripAdvisor — Director of Data Science (Feb 2015 – Mar 2017)</div>
-          <div class="card-body">
-            <p>Head of DS & Analytics for TripAdvisor Attractions; managed 15+ analysts/scientists driving predictive modeling, web analytics, and BI for product, marketing, sales, finance, operations, and executives.</p>
-          </div>
-        </div>
-        <div class="card" style="margin-top:16px">
-          <div class="card-head">Fandom (Wikimedia) — Head of Data (Dec 2013 – Feb 2015)</div>
-          <div class="card-body">
-            <p>First data leader; set data strategy, built analytics & ML models for engagement, experimentation, and content optimization; oversaw pipelines end to end.</p>
-          </div>
-        </div>
-        <div class="card" style="margin-top:16px">
-          <div class="card-head">StubHub — Marketing Analytics Manager (May 2012 – Dec 2013)</div>
-          <div class="card-body">
-            <p>Led a team applying ML for marketing optimization, segmentation, and predictive targeting; drove uplift in targeting and mobile engagement.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills (from resume) -->
-    <section id="skills" class="section alt">
-      <div class="container grid-2">
-        <div>
-          <h3>Skills & Tools</h3>
+      <div class="card">
+        <div class="card-head">Live Snapshot</div>
+        <div class="card-body">
           <ul class="bullets">
-            <li><strong>AI/ML:</strong> LLMs, Llama, causal inference, clustering, classification, deployment & optimization</li>
-            <li><strong>Languages:</strong> Python, R, SQL, Stata</li>
-            <li><strong>Data/Analytics:</strong> pandas, NumPy, A/B testing, Adobe Analytics, GA</li>
-            <li><strong>Cloud:</strong> AWS (S3, Redshift, Athena, Quicksight, SageMaker), GCP (BigQuery, Cloud SQL, Looker), Snowflake (Cortex AI)</li>
-            <li><strong>Platforms:</strong> Docker, Tableau, Qualtrics/Qualaroo, Microsoft 365</li>
+            <li>Search by term or subreddit</li>
+            <li>Top skills/tools & ecosystems</li>
+            <li>JD gap checker</li>
+            <li>Downloadable tables</li>
           </ul>
         </div>
-        <div class="card">
-          <div class="card-head">Highlights</div>
-          <div class="card-body">
-            <ul class="bullets">
-              <li>Built & led large DS/ML/econ teams delivering measurable business impact</li>
-              <li>Integrated LLMs and ML into HR decision flows at scale</li>
-              <li>End-to-end ownership: data strategy → modeling → productionization</li>
-            </ul>
-          </div>
-        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Education -->
-    <section id="education" class="section">
-      <div class="container grid-2">
-        <div>
-          <h3>Education</h3>
+  <!-- SCREENSHOTS -->
+  <section id="shots" class="section alt">
+    <div class="container">
+      <h2>Product Screenshots</h2>
+      <div class="shot-grid">
+        <figure class="shot">
+          <img src="assets/screenshots/shot1.png" alt="Screenshot: Top skills view">
+          <figcaption>Top skills & tools ranked by trend score</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/screenshots/shot2.png" alt="Screenshot: Co-occurrence view">
+          <figcaption>Co-occurrences revealing ecosystems</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/screenshots/shot3.png" alt="Screenshot: JD Gap">
+          <figcaption>Job-Description Gap analysis (paste a JD)</figcaption>
+        </figure>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://reddit-tool-1.onrender.com/" target="_blank" rel="noopener">Try it live</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container grid-2">
+      <div>
+        <h2>Why I built it</h2>
+        <p>Recruiting and workforce planning need <em>current</em> signals. Surveys and vendor reports lag; Reddit reveals what practitioners
+          struggle with <em>now</em>. This tool reduces noise and turns that stream into concise, defensible insights.</p>
+        <h3>Who it’s for</h3>
+        <ul class="bullets">
+          <li>People Analytics & TA leaders prioritizing skills</li>
+          <li>Learning/Enablement teams planning curricula</li>
+          <li>Product/Strategy teams tracking tool ecosystems</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-head">Tech stack</div>
+        <div class="card-body">
           <ul class="bullets">
-            <li><strong>Indiana University – Bloomington:</strong> PhD Marketing (2014), MBA (2011)</li>
-            <li><strong>University of Utah:</strong> MS Finance (2007)</li>
-            <li><strong>University of Texas – Austin:</strong> BS Statistics (2005)</li>
+            <li>Python · Streamlit · PRAW</li>
+            <li>Render (hosting)</li>
+            <li>LLM map-reduce summaries (optional)</li>
           </ul>
         </div>
-        <div class="card">
-          <div class="card-head">Location & Work Eligibility</div>
-          <div class="card-body">
-            <p>San Francisco Bay Area • Right to work in the EU</p>
-          </div>
-        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- About -->
-    <section id="about" class="section alt">
-      <div class="container grid-2">
-        <div>
-          <h3>About Kevin</h3>
-          <p>AI & Data Science leader with 15+ years building, scaling, and aligning DS/ML functions to exec priorities across HR, marketing, finance, and operations research. Passionate about translating advanced modeling—LLMs, ML, and econometrics—into clear, high-leverage decisions.</p>
-        </div>
-        <div class="card">
-          <div class="card-head">Contact & Links</div>
-          <div class="card-body">
-            <p><strong>Email:</strong> <a href="mailto:Kevin.J.Cooney@gmail.com">Kevin.J.Cooney@gmail.com</a></p>
-            <p><strong>Mobile:</strong> <a href="tel:+14157999090">(415) 799-9090</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kevinjcooney" target="_blank" rel="noopener">linkedin.com/in/kevinjcooney</a></p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/teedybeedy" target="_blank" rel="noopener">github.com/teedybeedy</a> • <a href="https://github.com/teedybeedy/reddit-tool" target="_blank" rel="noopener">reddit-tool</a></p>
-            <p><a class="btn btn-primary" href="https://reddit-tool-1.onrender.com/" target="_blank" rel="noopener">Launch the Tool</a></p>
-          </div>
-        </div>
+  <!-- RESUME -->
+  <section id="resume" class="section alt">
+    <div class="container">
+      <h2>Resume</h2>
+      <p class="tiny">PDF recommended for viewing; DOCX provided if needed.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="resume/Kevin-Cooney-Resume.pdf" target="_blank" rel="noopener">Download PDF</a>
+        <a class="btn" href="resume/Kevin-Cooney-Resume.docx" target="_blank" rel="noopener">Download DOCX</a>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer class="site-footer">
     <div class="container">
       <span>© <span id="y"></span> Kevin Cooney</span>
       <span>
         <a href="https://github.com/teedybeedy" target="_blank" rel="noopener">GitHub</a> ·
-        <a href="https://github.com/teedybeedy/reddit-tool" target="_blank" rel="noopener">Repo</a>
+        <a href="https://github.com/teedybeedy/reddit-tool" target="_blank" rel="noopener">Repo</a> ·
+        <a href="https://reddit-tool-1.onrender.com/" target="_blank" rel="noopener">Live App</a>
       </span>
     </div>
   </footer>
 
-  <!-- Pre-warm Render (free plan cold start) -->
   <script>
+    // Pre-warm Render dyno on first visit (free plan)
     fetch("https://reddit-tool-1.onrender.com/", { mode: "no-cors" }).catch(() => {});
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
