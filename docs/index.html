@@ -6,173 +6,224 @@
   <title>Kevin Cooney — Reddit Skills Radar</title>
   <meta name="description" content="Live skills intelligence from Reddit. Time-decay ranking, de-duplication, and an LLM map-reduce pipeline surface trends, summarize themes, and compare JDs to market chatter." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://reddit-tool-3.onrender.com">
   <link rel="dns-prefetch" href="https://reddit-tool-3.onrender.com">
+  <link rel="stylesheet" href="styles.css" />
   <meta property="og:title" content="Reddit Skills Radar — Kevin Cooney" />
   <meta property="og:description" content="Real-time skills & tools signals from Reddit with LLM summaries." />
   <meta property="og:type" content="website" />
 </head>
 <body class="light">
+  <a href="#main" class="skip-link">Skip to content</a>
+
   <!-- HEADER -->
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="container nav">
       <a href="#" class="brand">Kevin Cooney</a>
-      <nav>
+      <nav aria-label="Primary" class="topnav">
         <a href="#tool">Tool</a>
         <a href="#how">How it Works</a>
         <a href="#shots">Screenshots</a>
         <a href="#resume">Resume</a>
         <a class="btn" href="https://github.com/teedybeedy/reddit-tool" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn btn-primary" href="https://reddit-tool-3.onrender.com/" target="_blank" rel="noopener">Launch App</a>
-        <button id="themeToggle" class="btn small" title="Toggle theme">🌙</button>
+        <a class="btn btn-primary" href="https://reddit-tool-3.onrender.com/" target="_blank" rel="noopener" aria-label="Launch the live app on Render">Launch App</a>
+        <button id="themeToggle" class="btn small" title="Toggle color theme" aria-pressed="false">🌙</button>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <h1>Reddit Skills Radar</h1>
-        <p class="lead">
-          Turn Reddit’s live conversations into <strong>skills intelligence</strong>. The app combines fast heuristics
-          (time-decay ranking, de-duplication) with an <strong>LLM map-reduce pipeline</strong> to summarize themes,
-          surface tool ecosystems, and compare job descriptions to what the market actually discusses.
-        </p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://reddit-tool-3.onrender.com/" target="_blank" rel="noopener">Try it Live</a>
-          <a class="btn" href="#shots">See Screenshots</a>
+  <main id="main" role="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">Reddit Skills Radar</h1>
+          <p class="lead">
+            Turn Reddit’s live conversations into <strong>skills intelligence</strong>. The app combines fast heuristics
+            (time-decay ranking, de-duplication) with an <strong>LLM map-reduce pipeline</strong> to summarize themes,
+            surface tool ecosystems, and compare job descriptions to what the market actually discusses.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://reddit-tool-3.onrender.com/" target="_blank" rel="noopener">Try it Live</a>
+            <a class="btn" href="#shots">See Screenshots</a>
+          </div>
+          <p class="tiny">Hosted on Render • Reddit API + LLM summaries • No private data stored</p>
         </div>
-        <p class="tiny">Hosted on Render • Reddit API + LLM summaries • No private data stored</p>
-      </div>
 
-      <div class="hero-side">
-        <img src="assets/kevin.jpg" alt="Kevin Cooney" class="hero-photo" />
-        <div class="card">
-          <div class="card-head">About Kevin</div>
-          <div class="card-body">
-            <p>AI & People Analytics leader (15+ yrs). I design ML/LLM products that turn noisy signals into
-              executive-ready decisions. Tahoe skier/snowboarder/hiker—I build tools I wish HR had.</p>
-            <div class="mini-links">
-              <a href="mailto:Kevin.J.Cooney@gmail.com">Email</a> ·
-              <a href="https://www.linkedin.com/in/kevinjcooney" target="_blank" rel="noopener">LinkedIn</a> ·
-              <a href="https://github.com/teedybeedy" target="_blank" rel="noopener">GitHub</a>
+        <div class="hero-side">
+          <img src="assets/kevin.jpg" alt="Portrait of Kevin Cooney" class="hero-photo" decoding="async" />
+          <div class="card" aria-label="About Kevin">
+            <div class="card-head">About Kevin</div>
+            <div class="card-body">
+              <p>AI & People Analytics leader (15+ yrs). I design ML/LLM products that turn noisy signals into
+                executive-ready decisions. Tahoe skier/snowboarder/hiker—I build tools I wish HR had.</p>
+              <div class="mini-links">
+                <a href="mailto:Kevin.J.Cooney@gmail.com">Email</a> ·
+                <a href="https://www.linkedin.com/in/kevinjcooney" target="_blank" rel="noopener">LinkedIn</a> ·
+                <a href="https://github.com/teedybeedy" target="_blank" rel="noopener">GitHub</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- TOOL -->
-  <section id="tool" class="section">
-    <div class="container grid-2">
-      <div>
-        <h2>The Tool</h2>
-        <p>
-          Reddit Skills Radar runs a three-stage pipeline:
-          <strong>Rank</strong> (engagement × time-decay) →
-          <strong>Reduce Noise</strong> (language filters, de-duplication) →
-          <strong>LLM Summaries</strong> (map-reduce that condenses posts into concise, defensible insights).
-        </p>
-        <ul class="bullets">
-          <li><strong>Trend score:</strong> catch emerging skills/tools now</li>
-          <li><strong>LLM map-reduce:</strong> per-post mini-summaries → executive themes</li>
-          <li><strong>Co-occurrence:</strong> see ecosystems form around tools/skills</li>
-          <li><strong>JD Gap:</strong> paste a job description → get skill gaps vs market chatter</li>
-        </ul>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://reddit-tool-3.onrender.com/" target="_blank" rel="noopener">Launch App</a>
-          <a class="btn" href="https://github.com/teedybeedy/reddit-tool" target="_blank" rel="noopener">View Code</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-head">Quick Start</div>
-        <div class="card-body">
-          <ol class="ol">
-            <li>Pick a subreddit or search term</li>
-            <li>Review <em>Top Skills & Tools</em> & open the co-occurrence graph</li>
-            <li>Paste a JD to run the <em>JD Gap</em> comparison</li>
-            <li>Drill into LLM summaries & representative posts</li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section id="how" class="section alt">
-    <div class="container">
-      <h2>How It Works</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="icon" aria-hidden="true">📥</div>
-          <h3>Collect</h3>
-          <p>Fetch public Reddit posts by subreddit and search query; filter by language and length.</p>
-        </div>
-        <div class="step">
-          <div class="icon" aria-hidden="true">📊</div>
-          <h3>Rank</h3>
-          <p>Time-decay + engagement scoring to surface rising, high-signal topics.</p>
-        </div>
-        <div class="step">
-          <div class="icon" aria-hidden="true">🧠</div>
-          <h3>Summarize (LLM)</h3>
-          <p>Map-reduce LLM pipeline produces mini-summaries → rolled-up executive themes.</p>
-        </div>
-        <div class="step">
-          <div class="icon" aria-hidden="true">🚀</div>
-          <h3>Deliver</h3>
-          <p>Interactive views (Top skills, Co-occurrence, JD Gap) with exportable outputs.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SCREENSHOTS (3-up carousel + lightbox) -->
-  <section id="shots" class="section">
-    <div class="container">
-      <h2>Product Screenshots</h2>
-      <div class="carousel">
-        <button class="prev" aria-label="Previous">‹</button>
-        <div class="viewport">
-          <div class="carousel-track">
-            <div class="carousel-item"><img src="assets/screenshots/shot1.png" alt="Top skills view"></div>
-            <div class="carousel-item"><img src="assets/screenshots/shot2.png" alt="Co-occurrence view"></div>
-            <div class="carousel-item"><img src="assets/screenshots/shot3.png" alt="JD gap view"></div>
-            <!-- Add more items as needed -->
+    <!-- TOOL -->
+    <section id="tool" class="section" aria-labelledby="tool-title">
+      <div class="container grid-2">
+        <div>
+          <h2 id="tool-title">The Tool</h2>
+          <p>
+            Reddit Skills Radar runs a three-stage pipeline:
+            <strong>Rank</strong> (engagement × time-decay) →
+            <strong>Reduce Noise</strong> (language filters, de-duplication) →
+            <strong>LLM Summaries</strong> (map-reduce that condenses posts into concise, defensible insights).
+          </p>
+          <ul class="bullets">
+            <li><strong>Trend score:</strong> catch emerging skills/tools now</li>
+            <li><strong>LLM map-reduce:</strong> per-post mini-summaries → executive themes</li>
+            <li><strong>Co-occurrence:</strong> see ecosystems form around tools/skills</li>
+            <li><strong>JD Gap:</strong> paste a job description → get skill gaps vs market chatter</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://reddit-tool-3.onrender.com/" target="_blank" rel="noopener">Launch App</a>
+            <a class="btn" href="https://github.com/teedybeedy/reddit-tool" target="_blank" rel="noopener">View Code</a>
           </div>
         </div>
-        <button class="next" aria-label="Next">›</button>
-      </div>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="https://reddit-tool-3.onrender.com/" target="_blank" rel="noopener">Open the App</a>
-      </div>
-    </div>
-  </section>
 
-  <!-- LIGHTBOX -->
-  <div id="lightbox" class="lightbox hidden" aria-modal="true" role="dialog">
-    <button class="close" aria-label="Close">&times;</button>
-    <img class="lightbox-img" src="" alt="">
-  </div>
-
-  <!-- RESUME -->
-  <section id="resume" class="section alt">
-    <div class="container">
-      <h2>Resume</h2>
-      <p class="tiny">PDF recommended for viewing; DOCX also available.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="assets/resume/Kevin-Cooney-Resume.pdf" target="_blank" rel="noopener">Download PDF</a>
-        <a class="btn" href="assets/resume/Kevin-Cooney-Resume.docx" target="_blank" rel="noopener">Download DOCX</a>
+        <div class="card" aria-label="Quick start steps">
+          <div class="card-head">Quick Start</div>
+          <div class="card-body">
+            <ol class="ol">
+              <li>Pick a subreddit or search term</li>
+              <li>Review <em>Top Skills & Tools</em> & open the co-occurrence graph</li>
+              <li>Paste a JD to run the <em>JD Gap</em> comparison</li>
+              <li>Drill into LLM summaries & representative posts</li>
+            </ol>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="section alt" aria-labelledby="how-title">
+      <div class="container">
+        <h2 id="how-title">How It Works</h2>
+        <div class="steps" role="list">
+          <div class="step" role="listitem">
+            <div class="icon" aria-hidden="true">📥</div>
+            <h3>Collect</h3>
+            <p>Fetch public Reddit posts by subreddit and search query; filter by language and length.</p>
+          </div>
+          <div class="step" role="listitem">
+            <div class="icon" aria-hidden="true">📊</div>
+            <h3>Rank</h3>
+            <p>Time-decay + engagement scoring to surface rising, high-signal topics.</p>
+          </div>
+          <div class="step" role="listitem">
+            <div class="icon" aria-hidden="true">🧠</div>
+            <h3>Summarize (LLM)</h3>
+            <p>Map-reduce LLM pipeline produces mini-summaries → rolled-up executive themes.</p>
+          </div>
+          <div class="step" role="listitem">
+            <div class="icon" aria-hidden="true">🚀</div>
+            <h3>Deliver</h3>
+            <p>Interactive views (Top skills, Co-occurrence, JD Gap) with exportable outputs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SAMPLE EXECUTIVE SUMMARY -->
+    <section class="section alt" aria-labelledby="sample-title">
+      <div class="container">
+        <h2 id="sample-title">Sample Executive Summary</h2>
+        <div class="card" role="region" aria-label="LLM summary example">
+          <div class="card-body">
+            <ul class="bullets">
+              <li>Prompt-engineering threads shifting toward <strong>RAG evaluation</strong> and <strong>hallucination control</strong>.</li>
+              <li>Rising interest in <strong>Llama&nbsp;3.1</strong> fine-tuning for internal chatops; cost sensitivity called out.</li>
+              <li>Data folks discuss <strong>DuckDB</strong> + Parquet pipelines for local prototyping.</li>
+              <li>Hiring signals: demand for <strong>vector DB literacy</strong> and <strong>LLM observability</strong>.</li>
+              <li><em>Speculative:</em> likely spike in function-calling orchestration libs over the next few weeks.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section" aria-labelledby="testi-title">
+      <div class="container">
+        <h2 id="testi-title">What people say</h2>
+        <div class="grid-2">
+          <blockquote class="card" aria-label="Testimonial 1">
+            <div class="card-body">
+              “This cut our desk research time in half and gave us defensible bullets for leadership.”
+              <div class="tiny" style="margin-top:8px">— Director, People Analytics</div>
+            </div>
+          </blockquote>
+          <blockquote class="card" aria-label="Testimonial 2">
+            <div class="card-body">
+              “The JD gap view is killer — it forces clarity on must-have vs nice-to-have.”
+              <div class="tiny" style="margin-top:8px">— TA Lead</div>
+            </div>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREENSHOTS (3-up carousel + dots + lightbox) -->
+    <section id="shots" class="section" aria-labelledby="shots-title">
+      <div class="container">
+        <h2 id="shots-title">Product Screenshots</h2>
+        <div class="carousel" role="region" aria-roledescription="carousel" aria-label="App screenshots">
+          <button class="prev" aria-label="Previous slide" title="Previous">‹</button>
+          <div class="viewport" tabindex="0">
+            <div class="carousel-track">
+              <div class="carousel-item">
+                <img src="assets/screenshots/shot1.png" alt="Top skills view" loading="lazy" decoding="async">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/screenshots/shot2.png" alt="Co-occurrence view" loading="lazy" decoding="async">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/screenshots/shot3.png" alt="JD gap view" loading="lazy" decoding="async">
+              </div>
+              <!-- Add more items as needed -->
+            </div>
+          </div>
+          <button class="next" aria-label="Next slide" title="Next">›</button>
+        </div>
+        <div class="dots" aria-label="Carousel pagination"></div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://reddit-tool-3.onrender.com/" target="_blank" rel="noopener">Open the App</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox hidden" aria-modal="true" role="dialog">
+      <button class="close" aria-label="Close">&times;</button>
+      <img class="lightbox-img" src="" alt="">
     </div>
-  </section>
+
+    <!-- RESUME -->
+    <section id="resume" class="section alt" aria-labelledby="resume-title">
+      <div class="container">
+        <h2 id="resume-title">Resume</h2>
+        <p class="tiny">PDF recommended for viewing; DOCX also available.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="assets/resume/Kevin-Cooney-Resume.pdf" target="_blank" rel="noopener">Download PDF</a>
+          <a class="btn" href="assets/resume/Kevin-Cooney-Resume.docx" target="_blank" rel="noopener">Download DOCX</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="container foot">
       <span>© <span id="y"></span> Kevin Cooney</span>
       <span class="foot-links">
@@ -184,6 +235,7 @@
   </footer>
 
   <script>
+    // Pre-warm Render free dyno
     fetch("https://reddit-tool-3.onrender.com/", { mode: "no-cors" }).catch(()=>{});
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
