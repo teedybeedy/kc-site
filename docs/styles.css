@@ -56,12 +56,19 @@ a:hover{text-decoration:underline}
 .section.alt{background:#fff}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 
-/* SCREENSHOTS */
+/* Screenshots */
 .shot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:16px}
 .shot{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;position:relative}
-.shot img{width:100%;height:auto;max-height:280px;object-fit:contain;transition:transform .2s ease,box-shadow .2s ease;cursor:zoom-in}
-.shot:hover img{transform:scale(1.12);box-shadow:0 14px 40px rgba(0,0,0,.15);z-index:2}
-.shot figcaption{padding:10px 12px;color:#374151;font-size:.95rem;border-top:1px solid var(--line);background:#fff}
+.shot a{display:block} /* make the whole image clickable */
+.shot img{
+  width:100%;height:auto;max-height:280px;object-fit:contain;
+  transition:transform .22s ease, box-shadow .22s ease;
+  cursor:pointer;
+}
+.shot:hover img{transform:scale(1.2);box-shadow:0 16px 44px rgba(0,0,0,.18);z-index:2}
+
+/* Hide any leftover figcaptions */
+.shot figcaption{display:none}
 
 /* FOOTER */
 .site-footer{padding:18px 0;background:#fff}
