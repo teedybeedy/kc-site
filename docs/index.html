@@ -4,23 +4,28 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kevin Cooney — Reddit Skills Radar</title>
-  <meta name="description" content="Reddit Skills Radar: live signals from Reddit using LLM map-reduce, ranking, and JD gap analysis." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta name="description" content="Live skills intelligence from Reddit. Time-decay ranking, de-duplication, and an LLM map-reduce pipeline surface trends, summarize themes, and compare JDs to market chatter." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://reddit-tool-3.onrender.com">
+  <link rel="dns-prefetch" href="https://reddit-tool-3.onrender.com">
+  <meta property="og:title" content="Reddit Skills Radar — Kevin Cooney" />
+  <meta property="og:description" content="Real-time skills & tools signals from Reddit with LLM summaries." />
+  <meta property="og:type" content="website" />
 </head>
-<body>
+<body class="light">
   <!-- HEADER -->
   <header class="site-header">
     <div class="container nav">
       <a href="#" class="brand">Kevin Cooney</a>
       <nav>
         <a href="#tool">Tool</a>
+        <a href="#how">How it Works</a>
         <a href="#shots">Screenshots</a>
-        <a href="#about">About</a>
         <a href="#resume">Resume</a>
-        <a class="btn" href="https://github.com/teedybeedy/reddit-tool" target="_blank">GitHub</a>
-        <a class="btn btn-primary" href="https://reddit-tool-3.onrender.com/" target="_blank">Launch App</a>
+        <a class="btn" href="https://github.com/teedybeedy/reddit-tool" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-primary" href="https://reddit-tool-3.onrender.com/" target="_blank" rel="noopener">Launch App</a>
+        <button id="themeToggle" class="btn small" title="Toggle theme">🌙</button>
       </nav>
     </div>
   </header>
@@ -31,26 +36,28 @@
       <div class="hero-copy">
         <h1>Reddit Skills Radar</h1>
         <p class="lead">
-          Live skills intelligence from Reddit. This tool combines <strong>time-decay ranking</strong>,
-          <strong>de-duplication</strong>, and an <strong>LLM map-reduce pipeline</strong> to surface trends,
-          summarize themes, and compare job descriptions against what practitioners actually discuss.
+          Turn Reddit’s live conversations into <strong>skills intelligence</strong>. The app combines fast heuristics
+          (time-decay ranking, de-duplication) with an <strong>LLM map-reduce pipeline</strong> to summarize themes,
+          surface tool ecosystems, and compare job descriptions to what the market actually discusses.
         </p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://reddit-tool-3.onrender.com/" target="_blank">Try it Live</a>
+          <a class="btn btn-primary" href="https://reddit-tool-3.onrender.com/" target="_blank" rel="noopener">Try it Live</a>
           <a class="btn" href="#shots">See Screenshots</a>
         </div>
-        <p class="tiny">Hosted on Render • Uses Reddit API + LLM • No private data stored</p>
+        <p class="tiny">Hosted on Render • Reddit API + LLM summaries • No private data stored</p>
       </div>
+
       <div class="hero-side">
         <img src="assets/kevin.jpg" alt="Kevin Cooney" class="hero-photo" />
         <div class="card">
           <div class="card-head">About Kevin</div>
           <div class="card-body">
-            <p>AI & People Analytics leader (15+ yrs). I design ML/LLM products that turn noisy data into executive-ready decisions. Tahoe skier, snowboarder, hiker — I build tools I wish HR had.</p>
+            <p>AI & People Analytics leader (15+ yrs). I design ML/LLM products that turn noisy signals into
+              executive-ready decisions. Tahoe skier/snowboarder/hiker—I build tools I wish HR had.</p>
             <div class="mini-links">
               <a href="mailto:Kevin.J.Cooney@gmail.com">Email</a> ·
-              <a href="https://www.linkedin.com/in/kevinjcooney" target="_blank">LinkedIn</a> ·
-              <a href="https://github.com/teedybeedy" target="_blank">GitHub</a>
+              <a href="https://www.linkedin.com/in/kevinjcooney" target="_blank" rel="noopener">LinkedIn</a> ·
+              <a href="https://github.com/teedybeedy" target="_blank" rel="noopener">GitHub</a>
             </div>
           </div>
         </div>
@@ -65,97 +72,98 @@
         <h2>The Tool</h2>
         <p>
           Reddit Skills Radar runs a three-stage pipeline:
-          <strong>Rank</strong> (engagement × time decay) →
+          <strong>Rank</strong> (engagement × time-decay) →
           <strong>Reduce Noise</strong> (language filters, de-duplication) →
           <strong>LLM Summaries</strong> (map-reduce that condenses posts into concise, defensible insights).
         </p>
         <ul class="bullets">
-          <li><strong>Trend score:</strong> catch emerging skills/tools</li>
-          <li><strong>LLM map-reduce:</strong> mini-summaries → executive themes</li>
-          <li><strong>Co-occurrence:</strong> see ecosystems form</li>
-          <li><strong>JD Gap:</strong> paste a job description → get skill gaps</li>
+          <li><strong>Trend score:</strong> catch emerging skills/tools now</li>
+          <li><strong>LLM map-reduce:</strong> per-post mini-summaries → executive themes</li>
+          <li><strong>Co-occurrence:</strong> see ecosystems form around tools/skills</li>
+          <li><strong>JD Gap:</strong> paste a job description → get skill gaps vs market chatter</li>
         </ul>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://reddit-tool-3.onrender.com/" target="_blank">Launch App</a>
+          <a class="btn btn-primary" href="https://reddit-tool-3.onrender.com/" target="_blank" rel="noopener">Launch App</a>
+          <a class="btn" href="https://github.com/teedybeedy/reddit-tool" target="_blank" rel="noopener">View Code</a>
         </div>
       </div>
+
       <div class="card">
         <div class="card-head">Quick Start</div>
         <div class="card-body">
           <ol class="ol">
             <li>Pick a subreddit or search term</li>
-            <li>Explore top skills & tools</li>
-            <li>Open co-occurrence networks</li>
-            <li>Paste a JD to run the gap analysis</li>
+            <li>Review <em>Top Skills & Tools</em> & open the co-occurrence graph</li>
+            <li>Paste a JD to run the <em>JD Gap</em> comparison</li>
+            <li>Drill into LLM summaries & representative posts</li>
           </ol>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SCREENSHOTS -->
-    <section id="shots" class="section alt">
-      <div class="container">
-        <h2>Product Screenshots</h2>
-        <div class="shot-grid">
-          <figure class="shot">
-            <a href="assets/screenshots/shot1.png" target="_blank" rel="noopener">
-              <img src="assets/screenshots/shot1.png" alt="Top skills view">
-            </a>
-          </figure>
-          <figure class="shot">
-            <a href="assets/screenshots/shot2.png" target="_blank" rel="noopener">
-              <img src="assets/screenshots/shot2.png" alt="Co-occurrence view">
-            </a>
-          </figure>
-          <figure class="shot">
-            <a href="assets/screenshots/shot3.png" target="_blank" rel="noopener">
-              <img src="assets/screenshots/shot3.png" alt="JD gap view">
-            </a>
-          </figure>
+  <!-- HOW IT WORKS -->
+  <section id="how" class="section alt">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="icon" aria-hidden="true">📥</div>
+          <h3>Collect</h3>
+          <p>Fetch public Reddit posts by subreddit and search query; filter by language and length.</p>
         </div>
-      </div>
-    </section>
-
-
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="container grid-2">
-      <div>
-        <h2>Why I Built It</h2>
-        <p>
-          People decisions need <em>real-time</em> signals. Surveys and vendor reports lag months; Reddit shows
-          what practitioners wrestle with <em>today</em>. This app compresses the firehose into narratives leaders
-          can trust, with LLMs generating summaries at scale.
-        </p>
-        <h3>Who it’s for</h3>
-        <ul class="bullets">
-          <li>People Analytics & TA leaders aligning hiring to market skills</li>
-          <li>Learning/Enablement teams planning curricula</li>
-          <li>Strategy/Product teams tracking ecosystems</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="card-head">Tech Stack</div>
-        <div class="card-body">
-          <ul class="bullets">
-            <li>Python · Streamlit · PRAW (Reddit API)</li>
-            <li>LLM map-reduce summaries (configurable backend)</li>
-            <li>Time-decay ranking, de-duplication, co-occurrence graph</li>
-            <li>Render (hosting)</li>
-          </ul>
+        <div class="step">
+          <div class="icon" aria-hidden="true">📊</div>
+          <h3>Rank</h3>
+          <p>Time-decay + engagement scoring to surface rising, high-signal topics.</p>
+        </div>
+        <div class="step">
+          <div class="icon" aria-hidden="true">🧠</div>
+          <h3>Summarize (LLM)</h3>
+          <p>Map-reduce LLM pipeline produces mini-summaries → rolled-up executive themes.</p>
+        </div>
+        <div class="step">
+          <div class="icon" aria-hidden="true">🚀</div>
+          <h3>Deliver</h3>
+          <p>Interactive views (Top skills, Co-occurrence, JD Gap) with exportable outputs.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- SCREENSHOTS (Carousel + Lightbox) -->
+  <section id="shots" class="section">
+    <div class="container">
+      <h2>Product Screenshots</h2>
+      <div class="carousel">
+        <button class="prev" aria-label="Previous">‹</button>
+        <div class="carousel-track">
+          <img src="assets/screenshots/shot1.png" alt="Top skills view" class="carousel-item">
+          <img src="assets/screenshots/shot2.png" alt="Co-occurrence view" class="carousel-item">
+          <img src="assets/screenshots/shot3.png" alt="JD gap view" class="carousel-item">
+        </div>
+        <button class="next" aria-label="Next">›</button>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://reddit-tool-3.onrender.com/" target="_blank" rel="noopener">Open the App</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox hidden" aria-modal="true" role="dialog">
+    <button class="close" aria-label="Close">&times;</button>
+    <img class="lightbox-img" src="" alt="">
+  </div>
+
   <!-- RESUME -->
   <section id="resume" class="section alt">
     <div class="container">
       <h2>Resume</h2>
+      <p class="tiny">PDF recommended for viewing; DOCX also available.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="assets/resume/Kevin-Cooney-Resume.pdf" target="_blank">Download PDF</a>
-        <a class="btn" href="assets/resume/Kevin-Cooney-Resume.docx" target="_blank">Download DOCX</a>
+        <a class="btn btn-primary" href="assets/resume/Kevin-Cooney-Resume.pdf" target="_blank" rel="noopener">Download PDF</a>
+        <a class="btn" href="assets/resume/Kevin-Cooney-Resume.docx" target="_blank" rel="noopener">Download DOCX</a>
       </div>
     </div>
   </section>
@@ -165,16 +173,18 @@
     <div class="container foot">
       <span>© <span id="y"></span> Kevin Cooney</span>
       <span class="foot-links">
-        <a href="https://github.com/teedybeedy" target="_blank">GitHub</a> ·
-        <a href="https://github.com/teedybeedy/reddit-tool" target="_blank">Repo</a> ·
-        <a href="https://reddit-tool-3.onrender.com/" target="_blank">Live App</a>
+        <a href="https://github.com/teedybeedy" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://github.com/teedybeedy/reddit-tool" target="_blank" rel="noopener">Repo</a> ·
+        <a href="https://reddit-tool-3.onrender.com/" target="_blank" rel="noopener">Live App</a>
       </span>
     </div>
   </footer>
 
   <script>
+    // Pre-warm Render free dyno
     fetch("https://reddit-tool-3.onrender.com/", { mode: "no-cors" }).catch(()=>{});
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
+  <script src="scripts.js"></script>
 </body>
 </html>
